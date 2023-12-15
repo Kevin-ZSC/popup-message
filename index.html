@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>popup message</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <button class="sub" onclick="el()">Submit</button>
+        </div>
+        <div class="showWindon">
+            <img src="/404-tick.png">
+            <h1>Thank you</h1>
+            <p>Your deatil has been successfully submitted, thanks</p>
+            <button onclick="bc()">OK</button>
+        </div>
+    </div>
+
+    <script>
+
+        const submitted = document.querySelector('.btn');
+        const show = document.querySelector('.showWindon')
+       function el(){
+           submitted.style.display = 'none';
+           show.classList.add('popup');
+        //    show.style.display = 'block';
+       }
+
+       function bc(){
+           submitted.style.display = 'flex';
+           show.classList.remove('popup');
+       }
+
+
+    </script>
+</body>
+</html>
